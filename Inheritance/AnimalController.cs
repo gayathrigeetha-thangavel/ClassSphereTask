@@ -56,6 +56,7 @@ public class AnimalController
 
     }
 
+    // case 5: Wolf animal functionality
     internal void showWolfAnimal()
     {
         WolfAnimal wolfAnimal = new WolfAnimal("Wolf", 16, 80, 40) ;
