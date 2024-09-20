@@ -1,0 +1,14 @@
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/bin/Debug/net8.0/ClassSphereTask
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/bin/Debug/net8.0/ClassSphereTask.deps.json
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/bin/Debug/net8.0/ClassSphereTask.runtimeconfig.json
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/bin/Debug/net8.0/ClassSphereTask.dll
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/bin/Debug/net8.0/ClassSphereTask.pdb
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.AssemblyInfoInputs.cache
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.AssemblyInfo.cs
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.csproj.CoreCompileInputs.cache
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.dll
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/refint/ClassSphereTask.dll
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.pdb
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.genruntimeconfig.cache
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ref/ClassSphereTask.dll
