@@ -4,7 +4,7 @@ public class FlamingoBird : BirdAnimal
     public FlamingoBird(string animalName, int animalAge, double animalWeight, double wingSpan, string animalColor) : base(animalName,animalAge,animalWeight,wingSpan)
     {
         color = animalColor;
-        Console.WriteLine("Flamingo bird class constructor called");
+        //Console.WriteLine("Flamingo bird class constructor called");
     }
 
     public override void DoSound()

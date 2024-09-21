@@ -5,11 +5,16 @@ public class BirdAnimal : Animal
     public BirdAnimal(string animalName, int animalAge, double animalWeight, double wingLength) : base(animalName, animalAge, animalWeight)
     {
         wingSpan = wingLength;
-        Console.WriteLine("Bird animal class constructor called");
+        //Console.WriteLine("Bird animal class constructor called");
     }
 
     public override void DoSound()
     {
-        Console.WriteLine("Bird sounds like chirping\n");
+        Console.WriteLine("Bird sounds like chirping");
+    }
+
+    public override string Stats()
+    {
+        return $"{base.Stats()}, Wing Span: {wingSpan}";
     }
 }

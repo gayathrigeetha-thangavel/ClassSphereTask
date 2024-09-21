@@ -1,9 +1,10 @@
 public class WolfMan : WolfAnimal, IPerson
 {
 
-    public WolfMan(string animalName, int animalAge, double animalWeight, double speed) : base(animalName, animalAge, animalWeight, speed)
+    public string hasPointyEars;
+    public WolfMan(string animalName, int animalAge, double animalWeight, double speed, string hasPointyEar) : base(animalName, animalAge, animalWeight, speed)
     {
-        Console.WriteLine("\nWolfMan class constructor called");
+        this.hasPointyEars = hasPointyEar;
     }
 
     public override void DoSound()
@@ -14,5 +15,10 @@ public class WolfMan : WolfAnimal, IPerson
     public void Talk()
     {
         Console.WriteLine("The wolfman speaks in a gruff voice and he transforming into a wolf!");
+    }
+
+    public override string Stats()
+    {
+        return $"{base.Stats()}, Has Pointy Ears: {hasPointyEars}";
     }
 }

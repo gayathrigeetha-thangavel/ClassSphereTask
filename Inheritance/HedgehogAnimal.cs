@@ -4,7 +4,7 @@ public class HedgehogAnimal : Animal
     public HedgehogAnimal(string animalName, int animalAge, double animalWeight, double numOfQuills) : base(animalName, animalAge, animalWeight)
     {
         noOfQuills = numOfQuills;
-        Console.WriteLine("Hedgehog Animal class constructor called");
+        //Console.WriteLine("Hedgehog Animal class constructor called");
     }
 
     public override void DoSound()

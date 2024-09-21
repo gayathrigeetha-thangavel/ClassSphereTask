@@ -4,7 +4,7 @@ public class WormAnimal : Animal
     public WormAnimal(string name, int age, double weight, bool hasEars) : base(name, age, weight)
     {
         this.hasEars  = hasEars;
-        Console.WriteLine("Worm Animal class constructor called");
+        //Console.WriteLine("Worm Animal class constructor called");
     }
 
     public override void DoSound()

@@ -1,21 +1,22 @@
 
 
+
 public class AnimalController
 {
     //case 1: Horse animal functionality
     public void showHorseAnimal()
     {
         //case 1: Horse animal
-        HorseAnimal horseAnimal = new HorseAnimal("Horse", 10, 120, 40);
-        Console.WriteLine($"{horseAnimal.Name} animal is {horseAnimal.Age} years old.\nIt has {horseAnimal.Weight}kg weight and its life span is {horseAnimal.lifeSpan}.");
+        HorseAnimal horseAnimal = new HorseAnimal("Horse", 30, 600, "Icelandic horse");
+        Console.WriteLine($"Name:{horseAnimal.Name}, Life span:{horseAnimal.Age}, Maximum Weigth:{horseAnimal.Weight}kg, Breed:{horseAnimal.breed}");
         horseAnimal.DoSound();
     }
 
     //case 2: Dog animal functionality
     internal void showDogAnimal()
     { 
-        DogAnimal dogAnimal = new DogAnimal("Dog",5, 30, true);
-        Console.WriteLine($"{dogAnimal.Name} animal is {dogAnimal.Age} years old.\nIt has {dogAnimal.Weight}kg weight and it has a tail.");
+        DogAnimal dogAnimal = new DogAnimal("Dog",13, 110, "Bulldog");
+        Console.WriteLine($"Name:{dogAnimal.Name}, Life span:{dogAnimal.Age}, Maximum Weight:{dogAnimal.Weight}kg, Breed: {dogAnimal.breed}");
         dogAnimal.DoSound();
     }
 
@@ -23,7 +24,7 @@ public class AnimalController
     internal void showHedgehogAnimal()
     {
         HedgehogAnimal hedgehogAnimal = new HedgehogAnimal("Hedgehog", 1, 2,3000);
-        Console.WriteLine($"{hedgehogAnimal.Name} animal is {hedgehogAnimal.Age} years old.\nIt has {hedgehogAnimal.Weight}kg weight and it has a {hedgehogAnimal.noOfQuills} quills on its back.");
+        Console.WriteLine($"Name:{hedgehogAnimal.Name}, Life span:{hedgehogAnimal.Age}, Maximum Weight:{hedgehogAnimal.Weight}kg, No.of.quills:{hedgehogAnimal.noOfQuills}");
         hedgehogAnimal.DoSound();
     }
 
@@ -31,7 +32,7 @@ public class AnimalController
     internal void showWormAnimal()
     {
         WormAnimal wormAnimal = new WormAnimal("Worm",7, 0.25, false);
-        Console.WriteLine($"{wormAnimal.Name} animal has {wormAnimal.Age} years of life span.\nIt has {wormAnimal.Weight}grams weight and {wormAnimal.checkHasEars(wormAnimal.hasEars)}.");
+        Console.WriteLine($"Name:{wormAnimal.Name}, Life span:{wormAnimal.Age}, Maximum Weight:{wormAnimal.Weight}grams, Ears:{wormAnimal.checkHasEars(wormAnimal.hasEars)}");
         wormAnimal.DoSound();
     }
 
@@ -39,19 +40,19 @@ public class AnimalController
     internal void showBirdAnimal()
     {
         BirdAnimal birdAnimal= new BirdAnimal("Bird",20, 150, 3.5);
-        Console.WriteLine($"{birdAnimal.Name} animal has {birdAnimal.Age} years of life span.\nIt has a maximum {birdAnimal.Weight}kg weight and it has {birdAnimal.wingSpan} meters wingspan.");
+        Console.WriteLine($"Name:{birdAnimal.Name}, Life span:{birdAnimal.Age}, Maximum Weight:{birdAnimal.Weight}kg, Wingspan:{birdAnimal.wingSpan} meters");
         birdAnimal.DoSound();
 
         PelicanBird pelicanBird= new PelicanBird("Pelican Bird",20, 15, 3.5, 50);
-        Console.WriteLine($"{pelicanBird.Name} has {pelicanBird.Age} years of life span.\nIt has a maximum {pelicanBird.Weight}kg weight, it has {pelicanBird.wingSpan} meters wingspan and it has {pelicanBird.beak}inches long beak pouch.");
+        Console.WriteLine($"Name:{pelicanBird.Name}, Life span:{pelicanBird.Age}, Maximum Weight:{pelicanBird.Weight}kg, Wingspan:{pelicanBird.wingSpan} meters, beak:{pelicanBird.beak}inches");
         pelicanBird.DoSound();
 
         FlamingoBird flamingoBird = new FlamingoBird("Flamingo Bird",30, 3.5, 100, "Pink color");
-        Console.WriteLine($"{flamingoBird.Name} has {flamingoBird.Age} years of life span.\nIt has a maximum {flamingoBird.Weight}kg weight, it has {flamingoBird.wingSpan} centimeters wingspan and it has {flamingoBird.color} with black feathers.");
+        Console.WriteLine($"Name:{flamingoBird.Name}, Life span:{flamingoBird.Age}, Maximum Weight:{flamingoBird.Weight}kg, Wingspan:{flamingoBird.wingSpan} cm , Color:{flamingoBird.color}");
         flamingoBird.DoSound();
 
         SwanBird swanBird = new SwanBird("Swan Bird",12, 12, 2.4, "herbivorous");
-        Console.WriteLine($"{swanBird.Name} has {swanBird.Age} years of life span.\nIt has a maximum {swanBird.Weight}kg weight, it has {swanBird.wingSpan} centimeters wingspan and it is {swanBird.foodType} kind of bird.");
+        Console.WriteLine($"Name:{swanBird.Name}, Life span:{swanBird.Age}, Maximum Weight:{swanBird.Weight}kg, Wingspan:{swanBird.wingSpan} cm, Food type:{swanBird.foodType}");
         swanBird.DoSound();
 
     }
@@ -60,12 +61,18 @@ public class AnimalController
     internal void showWolfAnimal()
     {
         WolfAnimal wolfAnimal = new WolfAnimal("Wolf", 16, 80, 40) ;
-        Console.WriteLine($"{wolfAnimal.Name} animal has {wolfAnimal.Age} years of life span.\nIt has a maximum {wolfAnimal.Weight}kg weight and it runs {wolfAnimal.runningSpeed} miles per hour.");
+        Console.WriteLine($"Name:{wolfAnimal.Name}, Life span:{wolfAnimal.Age}, Maximum Weight:{wolfAnimal.Weight}kg, Run speed:{wolfAnimal.runningSpeed} miles per hour.");
         wolfAnimal.DoSound();
 
-        WolfMan wolfMan = new WolfMan("Wolf", 12, 70, 35) ;
-        Console.WriteLine($"{wolfMan.Name} animal has {wolfMan.Age} years of life span.\nIt has a maximum {wolfMan.Weight}kg weight and it runs {wolfMan.runningSpeed} miles per hour.");
+        WolfMan wolfMan = new WolfMan("Wolf Man", 12, 70, 35, "Yes") ;
         wolfMan.DoSound();
         wolfMan.Talk();
+    }
+
+    internal void showCatAnimal()
+    {
+        CatAnimal catAnimal= new CatAnimal("Cat",18, 4.5, true);
+        catAnimal.DoSound();
+        catAnimal.Stats();
     }
 }

@@ -15,4 +15,10 @@ public abstract class Animal
     }
 
     public abstract void DoSound();
-}
+
+    public virtual string Stats()
+    {
+        return $"Animal Name:{Name}, Age(Life span):{Age}, Maximum Weight: {Weight}";
+
+    }
+} 

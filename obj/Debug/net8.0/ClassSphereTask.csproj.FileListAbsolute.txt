@@ -12,3 +12,4 @@
 /Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.pdb
 /Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.genruntimeconfig.cache
 /Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ref/ClassSphereTask.dll
+/Users/gayathrigeetha/Lexicon-Training/ClassSphereTask/obj/Debug/net8.0/ClassSphereTask.sourcelink.json

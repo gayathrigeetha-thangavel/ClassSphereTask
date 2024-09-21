@@ -27,7 +27,9 @@ internal partial class Program
         Console.WriteLine("Main Menu");
         Console.WriteLine("1: Create Person");
         Console.WriteLine("2: Display the person");
-        Console.WriteLine("3: Show different types of animals");
+        Console.WriteLine("3: Show individual animal statistics");
+        Console.WriteLine("4: Animal List");
+        Console.WriteLine("5: Dog List");
         Console.WriteLine("0: Quit");
     }
 
@@ -56,11 +58,18 @@ internal partial class Program
             case 3:
                 showTheDifferentTypesOfAnimals();
                 break;
+            case 4:
+                listDifferentAnimalsAndChartertics();
+                break;
+            case 5:
+                listDifferentDogsAndChartertics(); 
+                break;
             default:
                 Console.WriteLine("Choose only 1 to 3 options");
                 break;
         }
     }
+
 
     // Case 1: create the persoon with different type of validations are executed
 
@@ -395,10 +404,83 @@ internal partial class Program
             case 6:
                 animalController.showWolfAnimal();
                 break; 
+            case 7:
+                animalController.showCatAnimal();
+                break;
             default:
                 Console.WriteLine("Choose only 1 to 6 options");
                 break;
         }
     }
+
+    // case 4: list all the animals
+    private static void listDifferentAnimalsAndChartertics()
+    {
+        List<Animal> animals = new List<Animal>();
+
+        animals.Add(new BirdAnimal("Bird",20, 150, 3.5));
+        animals.Add(new CatAnimal("Cat",18, 4.5, true));
+        animals.Add(new HedgehogAnimal("Hedgehog", 1, 2,4000));
+        animals.Add(new HorseAnimal("Horse", 30, 500, "Standard horse"));
+        animals.Add(new WolfAnimal("Wolf", 16, 80, 40));
+        animals.Add(new WolfMan("Wolf Man", 12, 70, 35, "Yes"));
+        animals.Add(new WormAnimal("Worm",7, 0.25, false));
+        animals.Add(new DogAnimal("Dog",13, 110, "Beagle"));
+
+        //list the animal names
+        Console.WriteLine("Animal names");
+        foreach (Animal animal in animals)
+        {
+            Console.WriteLine ($"Name:{animal.Name}");
+        }
+
+        // list the animal sounds
+        Console.WriteLine("\nAnimal sounds");
+        foreach(Animal animal in animals)
+        {
+            if (animal is IPerson person)
+            {
+                person.Talk();
+            }
+            else
+            {
+                animal.DoSound();
+            }
+            
+        }
+
+        //list the animal stats : when we call the stats() method it will go the derived class and call the override method. 
+        //During the override function print the values that will come from the both base class and dervied class
+
+        Console.WriteLine("\nAnimal Statistics:");
+        foreach (Animal animal in animals)
+        {
+            Console.WriteLine(animal.Stats());
+            if (animal is DogAnimal dogAnimal)// this will print when the dog animal class instantiate
+            {
+                // check the possible option to get the optional name through dog animal class method
+                Console.WriteLine($"Dog NickName:{dogAnimal.GetOptionalName("")}");
+                Console.WriteLine($"Dog NickName:{dogAnimal.GetOptionalName("Scooby")}");
+            }
+        }
+    }
+
+    // case 5: List the different type of dogs
+     private static void listDifferentDogsAndChartertics()
+    {
+        List<DogAnimal> dogs = new List<DogAnimal>();
+        
+        dogs.Add(new DogAnimal("Dog",13, 110, "Bulldog"));
+        dogs.Add(new DogAnimal("Dog",13, 110, "German Shepherd"));
+        dogs.Add(new DogAnimal("Dog",13, 110, "Rottweiler"));
+        dogs.Add(new DogAnimal("Dog",13, 110, "Labrador Retriever"));
+        //dogs.Add(new HorseAnimal("Horse",40,600,"Icelandic")); Answer: its doesn't support horse animal class because lists will be added only dog animal instance...
+
+        foreach (DogAnimal dog in dogs)
+        {
+            Console.WriteLine ($"Name:{dog.breed}");
+        }
+    }
+
     
 }
