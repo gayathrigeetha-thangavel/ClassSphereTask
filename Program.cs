@@ -2,6 +2,7 @@
 
 internal partial class Program
 {
+    private static Person pObj = null;
     private static void Main(string[] args)
     {
        
@@ -44,10 +45,10 @@ internal partial class Program
 
     public static void executeUserChoice(int choice, PersonHandler personHandler)
     {
-        Person pObj = new Person();
         switch (choice)
         {
             case 0:
+                Console.WriteLine("Exiting...");
                 break;
             case 1:
                 createThePerson();
@@ -65,7 +66,7 @@ internal partial class Program
                 listDifferentDogsAndChartertics(); 
                 break;
             default:
-                Console.WriteLine("Choose only 1 to 3 options");
+                Console.WriteLine("Choose only 1 to 5 options");
                 break;
         }
     }
@@ -75,7 +76,6 @@ internal partial class Program
 
     private static void createThePerson()
     {
-        Person person = new Person();
         PersonHandler personHandler = new PersonHandler();
 
         //get user inputs from prompt
@@ -126,9 +126,9 @@ internal partial class Program
         if (validationErrors.Count  == 0)
         {
             Console.WriteLine("All inputs are valid");
-            person = personHandler.CreatePerson(fName!, lName!, age, height, weight);
+            pObj = personHandler.CreatePerson(fName!, lName!, age, height, weight);
             Console.WriteLine("User Created Successfully");
-            personHandler.HandlerClassPrint(person);
+            personHandler.HandlerClassPrint(pObj);
         }
         else
         {
@@ -351,7 +351,15 @@ internal partial class Program
     private static void displayThePerson(PersonHandler personHandler, Person pObj)
     {
         //call the handler class method to print the person deatils which is stored in person class using encapsulation
-        personHandler.HandlerClassPrint(pObj);
+        if (pObj != null)
+        {
+            personHandler.HandlerClassPrint(pObj);
+        }
+        else
+        {
+            Console.WriteLine("No person created yet. Please create a person.");
+        }
+        
     }
 
     //Case 3: Showing different type of animal categories with sub menu
@@ -385,6 +393,7 @@ internal partial class Program
         switch (input)
         {
             case 0:
+                Console.WriteLine("Exiting...");
                 break;
             case 1:
                 animalController.showHorseAnimal();
