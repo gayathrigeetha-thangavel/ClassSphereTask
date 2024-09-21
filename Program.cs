@@ -2,7 +2,7 @@
 
 internal partial class Program
 {
-    private static Person pObj = null;
+    private static Person? pObj = null;
     private static void Main(string[] args)
     {
        
@@ -348,7 +348,7 @@ internal partial class Program
     }
 
     // case 2: display the person details    
-    private static void displayThePerson(PersonHandler personHandler, Person pObj)
+    private static void displayThePerson(PersonHandler personHandler, Person? pObj)
     {
         //call the handler class method to print the person deatils which is stored in person class using encapsulation
         if (pObj != null)
